@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  directus:
+    image: directus/directus:latest
+    container_name: directus
+    ports:
+      - "8055:8055"
+    environment:
+      SECRET: "4f6a2d5c3b1e7f8a9c0d6b4e2a3f1d7e5c9b0a8f6d4e3b2c1a0d7e5c9b0a8f6"
+      ADMIN_EMAIL: "admin@example.com"
+      ADMIN_PASSWORD: "Admin@123"
+      DB_CLIENT: "pg"
+      DB_HOST: "ep-round-cake-a1gdp9pz-pooler.ap-southeast-1.aws.neon.tech"
+      DB_PORT: "5432"
+      DB_DATABASE: "rsn"
+      DB_USER: "rsn_owner"
+      DB_PASSWORD: "npg_NknJQX4K2wta"
+      DB_SSL: "true"
+    restart: unless-stopped
